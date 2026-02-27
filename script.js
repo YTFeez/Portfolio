@@ -10,6 +10,7 @@
   const revealEls = document.querySelectorAll(".reveal");
   const statNumbers = document.querySelectorAll(".stat-number");
   const projectCards = document.querySelectorAll(".project-card[data-tilt]");
+  const projectsSection = document.querySelector(".section.projects");
 
   // Barre de progression du scroll
   function updateScrollProgress() {
@@ -96,6 +97,21 @@
     );
     statNumbers.forEach(function (el) {
       statsObserver.observe(el);
+    });
+  }
+
+  // Fond quadrillé de la section projets : légère lueur qui suit la souris
+  if (projectsSection) {
+    projectsSection.addEventListener("mousemove", function (e) {
+      var rect = projectsSection.getBoundingClientRect();
+      var x = ((e.clientX - rect.left) / rect.width) * 100;
+      var y = ((e.clientY - rect.top) / rect.height) * 100;
+      projectsSection.style.setProperty("--mx", x + "%");
+      projectsSection.style.setProperty("--my", y + "%");
+    });
+    projectsSection.addEventListener("mouseleave", function () {
+      projectsSection.style.setProperty("--mx", "50%");
+      projectsSection.style.setProperty("--my", "0%");
     });
   }
 
