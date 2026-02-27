@@ -3,7 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio — Créateur numérique</title>
+  <title>PRISME — Créateur numérique | Développeur &amp; Concepteur</title>
+  <meta name="description" content="PRISME, agence web fondée par un jeune développeur de 15 ans : création de sites vitrines, portfolios et petites applications. Disponible pour vos projets." />
+  <!-- Open Graph / partage sur les réseaux -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="PRISME — Créateur numérique" />
+  <meta property="og:description" content="PRISME, agence de création de sites web : expériences numériques mémorables pour particuliers et petites structures. Disponible pour de nouveaux projets." />
+  <meta property="og:locale" content="fr_FR" />
+  <!-- Remplace par l'URL réelle quand le site est en ligne -->
+  <!-- <meta property="og:url" content="https://ton-site.com/" /> -->
+  <!-- Ajoute une image 1200x630 px pour un beau partage (optionnel) -->
+  <!-- <meta property="og:image" content="https://ton-site.com/og-image.jpg" /> -->
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="PRISME — Créateur numérique" />
+  <meta name="twitter:description" content="PRISME, agence web : développement de sites modernes, portfolios et petites applications. Disponible pour vos projets." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -13,12 +27,19 @@
   <div class="scroll-progress" aria-hidden="true"></div>
   <header class="header">
     <nav class="nav">
-      <a href="#accueil" class="logo">Portfolio</a>
+      <a href="#accueil" class="logo">PRISME</a>
       <ul class="nav-links">
         <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#apropos">À propos</a></li>
         <li><a href="#projets">Projets</a></li>
         <li><a href="#competences">Compétences</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li class="nav-availability">
+          <span class="availability-badge availability-on" title="Disponible pour de nouveaux projets">
+            <span class="availability-dot"></span>
+            Disponible
+          </span>
+        </li>
       </ul>
       <button class="nav-toggle" aria-label="Menu">
         <span></span>
@@ -52,6 +73,32 @@
       <div class="hero-scroll">
         <span>Scroll</span>
         <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <section id="apropos" class="section about">
+      <div class="container about-container">
+        <h2 class="section-title reveal">À propos</h2>
+        <p class="section-subtitle reveal">Qui je suis</p>
+        <div class="about-content reveal">
+          <div class="about-text">
+            <p class="about-intro">
+              J’ai <strong>15 ans</strong> et je construis mon avenir dans le web : je suis <strong>développeur</strong> et je monte mon agence <strong>PRISME</strong>, spécialisée dans la création de sites web.
+            </p>
+            <p>
+              Passionné par le code et le design, je crée des sites sur mesure — vitrines, portfolios, petites applications — pour ceux qui veulent une présence en ligne claire et moderne. Chaque projet est l’occasion d’apprendre et de livrer un résultat dont on est fier.
+            </p>
+            <p>
+              Aujourd’hui je travaille avec des particuliers et de petits projets ; demain, une agence à part entière. Si vous avez une idée de site ou besoin d’un coup de main, on peut en parler.
+            </p>
+            <a href="#contact" class="btn btn-primary about-cta">On en parle</a>
+          </div>
+          <div class="about-badge">
+            <span class="about-age">15</span>
+            <span class="about-age-label">ans</span>
+            <span class="about-role">Développeur & fondateur</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -177,7 +224,7 @@
 
   <footer class="footer">
     <div class="container">
-      <p>© 2025 Portfolio. Fait avec soin.</p>
+      <p>© 2026 PRISME. Fait avec <span class="footer-accent">soin</span>.</p>
     </div>
   </footer>
 
