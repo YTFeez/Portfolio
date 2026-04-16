@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#090a0f" />
+  <meta name="description" content="La démarche Prism : découverte, proposition, conception et lancement de votre site web." />
+  <title>Prism — Démarche</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-prism-page="demarche">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <div class="prism-bg" aria-hidden="true">
+    <span class="prism-bg__layer"></span>
+  </div>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="logo"><span data-bind="brandName">Prism</span></a>
+      <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="nav-panel" aria-label="Ouvrir le menu">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav id="nav-panel" class="nav nav-panel" aria-label="Navigation principale">
+        <a href="index.html" data-nav-page="index">Accueil</a>
+        <a href="expertise.html" data-nav-page="expertise">Expertise</a>
+        <a href="demarche.html" data-nav-page="demarche">Démarche</a>
+        <a href="projets.html" data-nav-page="projets">Projets</a>
+        <a href="contact.html" class="nav-cta" data-nav-page="contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <header class="page-head">
+      <p class="eyebrow">Méthode</p>
+      <h1 class="page-head__title">Démarche en quatre temps</h1>
+      <p class="page-head__lead">Un déroulé clair pour avancer sereinement, sans surprise sur le périmètre ni les livrables.</p>
+    </header>
+
+    <section class="section section--surface prism-glass-panel prism-glass-panel--teal" aria-labelledby="process-title">
+      <header class="section__head section__head--flush-top">
+        <p class="eyebrow" id="process-title">Étapes</p>
+        <h2 class="section__title">Du cadrage à la mise en ligne</h2>
+      </header>
+      <ol class="process-list" data-process></ol>
+    </section>
+
+    <p class="section__intro section__cta-row--buttons">
+      <a href="projets.html" class="btn btn--outline">Voir les projets</a>
+      <a href="contact.html" class="btn btn--primary">Lancer un projet</a>
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <a href="index.html" class="logo logo--sm"><span data-bind="brandName">Prism</span></a>
+        <p class="site-footer__tag">Sites vitrines sur mesure — indépendants &amp; petites structures</p>
+      </div>
+      <p class="site-footer__legal" data-hide-if-empty>
+        <span data-bind="footerNote"></span>
+      </p>
+      <p class="site-footer__copy">© <span id="year"></span> <span data-bind="brandName">Prism</span>. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="site-config.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

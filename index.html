@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#090a0f" />
+  <meta name="description" content="Prism — sites vitrines et pages web sur mesure pour indépendants et petites entreprises." />
+  <title>Prism — Création de sites web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-prism-page="index">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <div class="prism-bg" aria-hidden="true">
+    <span class="prism-bg__layer"></span>
+  </div>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="logo"><span data-bind="brandName">Prism</span></a>
+      <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="nav-panel" aria-label="Ouvrir le menu">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav id="nav-panel" class="nav nav-panel" aria-label="Navigation principale">
+        <a href="index.html" data-nav-page="index">Accueil</a>
+        <a href="expertise.html" data-nav-page="expertise">Expertise</a>
+        <a href="demarche.html" data-nav-page="demarche">Démarche</a>
+        <a href="projets.html" data-nav-page="projets">Projets</a>
+        <a href="contact.html" class="nav-cta" data-nav-page="contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="hero">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow" data-bind="heroKicker">Studio web &amp; design</p>
+          <h1 class="hero__title">
+            <span data-bind="heroTitle">Sites web sur mesure pour</span>
+            <span class="hero__title-accent" data-bind="heroTitleAccent">marques exigeantes</span>
+          </h1>
+          <p class="hero__lead" data-bind="heroSubtitle">
+            Nous concevons des expériences digitales claires, performantes et alignées sur vos objectifs business — du cadrage à la mise en ligne.
+          </p>
+          <div class="hero__actions">
+            <a href="contact.html" class="btn btn--primary">Demander un devis</a>
+            <a href="expertise.html" class="btn btn--outline">Découvrir l’offre</a>
+          </div>
+        </div>
+        <aside class="hero__aside" aria-label="Indicateurs">
+          <div class="hero-card prism-glass-panel prism-glass-panel--cyan">
+            <p class="hero-card__label">Engagement</p>
+            <p class="hero-card__value">Qualité &amp; délais</p>
+            <p class="hero-card__muted">Un interlocuteur dédié, des jalons clairs et un suivi transparent.</p>
+          </div>
+        </aside>
+      </div>
+
+      <div class="stats prism-glass-panel prism-glass-panel--indigo" data-stats-row>
+        <div class="stats__item">
+          <span class="stats__value" data-bind="statProjectsValue">—</span>
+          <span class="stats__label" data-bind="statProjectsLabel">projets livrés</span>
+        </div>
+        <div class="stats__divider" aria-hidden="true"></div>
+        <div class="stats__item">
+          <span class="stats__value" data-bind="statClientsValue">—</span>
+          <span class="stats__label" data-bind="statClientsLabel">clients accompagnés</span>
+        </div>
+        <div class="stats__divider" aria-hidden="true"></div>
+        <div class="stats__item">
+          <span class="stats__value" data-bind="statDelayValue">48 h</span>
+          <span class="stats__label" data-bind="statDelayLabel">délai moyen de réponse</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="teasers-title">
+      <header class="section__head section__head--center">
+        <p class="eyebrow">Découvrir</p>
+        <h2 id="teasers-title" class="section__title">Le studio en quelques pages</h2>
+        <p class="section__intro">
+          Notre façon de travailler, les prestations proposées et la façon dont nous menons un projet — pour que vous sachiez à quoi vous attendre avant même le premier échange.
+        </p>
+      </header>
+      <div class="teaser-grid">
+        <a class="teaser-card prism-glass-panel prism-glass-panel--violet" href="expertise.html">
+          <span class="teaser-card__tag">01 — Expertise</span>
+          <h3 class="teaser-card__title">Offre &amp; valeur</h3>
+          <p class="teaser-card__text">Piliers stratégiques et services proposés.</p>
+        </a>
+        <a class="teaser-card prism-glass-panel prism-glass-panel--teal" href="demarche.html">
+          <span class="teaser-card__tag">02 — Démarche</span>
+          <h3 class="teaser-card__title">Méthode</h3>
+          <p class="teaser-card__text">Les quatre étapes, de la découverte au lancement.</p>
+        </a>
+        <a class="teaser-card prism-glass-panel prism-glass-panel--rose" href="projets.html">
+          <span class="teaser-card__tag">03 — Références</span>
+          <h3 class="teaser-card__title">Réalisations</h3>
+          <p class="teaser-card__text">Les références publiques seront ajoutées au fil des livraisons.</p>
+        </a>
+      </div>
+      <p class="section__intro section__cta-row">
+        <a href="contact.html" class="btn btn--primary">Passer à l’action — Contact</a>
+      </p>
+    </section>
+
+    <section id="temoignage" class="section section--quote" hidden>
+      <blockquote class="quote prism-glass-panel prism-glass-panel--lilac">
+        <p data-bind="testimonialQuote"></p>
+        <footer>
+          <cite data-bind="testimonialAuthor"></cite>
+          <span class="quote__role" data-bind="testimonialRole"></span>
+        </footer>
+      </blockquote>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <a href="index.html" class="logo logo--sm"><span data-bind="brandName">Prism</span></a>
+        <p class="site-footer__tag">Sites vitrines sur mesure — indépendants &amp; petites structures</p>
+      </div>
+      <p class="site-footer__legal" data-hide-if-empty>
+        <span data-bind="footerNote"></span>
+      </p>
+      <p class="site-footer__copy">© <span id="year"></span> <span data-bind="brandName">Prism</span>. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="site-config.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

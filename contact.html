@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#090a0f" />
+  <meta name="description" content="Contact Prism : formulaire projet, budget et idées. Réponse sous 48 h ouvrées." />
+  <title>Prism — Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-prism-page="contact">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <div class="prism-bg" aria-hidden="true">
+    <span class="prism-bg__layer"></span>
+  </div>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="logo"><span data-bind="brandName">Prism</span></a>
+      <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="nav-panel" aria-label="Ouvrir le menu">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav id="nav-panel" class="nav nav-panel" aria-label="Navigation principale">
+        <a href="index.html" data-nav-page="index">Accueil</a>
+        <a href="expertise.html" data-nav-page="expertise">Expertise</a>
+        <a href="demarche.html" data-nav-page="demarche">Démarche</a>
+        <a href="projets.html" data-nav-page="projets">Projets</a>
+        <a href="contact.html" class="nav-cta" data-nav-page="contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <header class="page-head">
+      <p class="eyebrow">Contact</p>
+      <h1 class="page-head__title">Parlons de votre projet</h1>
+      <p class="page-head__lead">Brief, budget et idées : un seul formulaire pour démarrer l’échange.</p>
+    </header>
+
+    <section class="section section--contact" aria-labelledby="contact-block-title">
+      <h2 id="contact-block-title" class="visually-hidden">Formulaire et coordonnées</h2>
+      <div class="contact-layout contact-layout--form">
+        <div class="contact-layout__main">
+          <p class="contact__lead" data-bind="contactLead"></p>
+          <p class="contact__meta" data-bind="contactResponseTime"></p>
+
+          <div
+            id="form-success"
+            class="form-success prism-glass-panel prism-glass-panel--mint"
+            hidden
+            role="status"
+            aria-live="polite"
+            tabindex="-1"
+          >
+            <strong>Message envoyé</strong>
+            <p>Nous avons bien reçu votre demande et vous répondrons dans les meilleurs délais.</p>
+          </div>
+
+          <form
+            class="contact-form prism-glass-panel prism-glass-panel--rose"
+            action="https://formsubmit.co/fanzini.aronne.pro@gmail.com"
+            method="post"
+          >
+            <input type="hidden" name="_subject" value="Prism — Nouveau message (site web)" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" id="contact-form-next" value="" />
+            <input type="text" name="_honey" class="contact-form__hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Nom complet <span class="form-req" aria-hidden="true">*</span></label>
+                <input
+                  class="form-input"
+                  id="contact-name"
+                  name="name"
+                  type="text"
+                  required
+                  autocomplete="name"
+                  placeholder="Jean Dupont"
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-email">E-mail professionnel <span class="form-req" aria-hidden="true">*</span></label>
+                <input
+                  class="form-input"
+                  id="contact-email"
+                  name="email"
+                  type="email"
+                  required
+                  autocomplete="email"
+                  inputmode="email"
+                  placeholder="vous@entreprise.com"
+                />
+              </div>
+              <div class="form-group form-group--full">
+                <label class="form-label" for="contact-budget">Budget indicatif <span class="form-req" aria-hidden="true">*</span></label>
+                <select class="form-select" id="contact-budget" name="budget" required>
+                  <option value="" disabled selected>Sélectionnez une fourchette</option>
+                  <option value="Moins de 500 €">Moins de 500 €</option>
+                  <option value="500 € – 2 000 €">500 € – 2 000 €</option>
+                  <option value="2 000 € – 5 000 €">2 000 € – 5 000 €</option>
+                  <option value="5 000 € – 10 000 €">5 000 € – 10 000 €</option>
+                  <option value="Plus de 10 000 €">Plus de 10 000 €</option>
+                  <option value="À définir après échange">À définir après échange</option>
+                  <option value="Personnalisé (précisez dans le message)">Personnalisé (précisez dans le message)</option>
+                </select>
+              </div>
+              <div class="form-group form-group--full">
+                <label class="form-label" for="contact-idea">Votre idée ou besoin <span class="form-req" aria-hidden="true">*</span></label>
+                <textarea
+                  class="form-textarea"
+                  id="contact-idea"
+                  name="message"
+                  required
+                  rows="6"
+                  placeholder="Type de site, délais, références, contraintes techniques…"
+                ></textarea>
+              </div>
+            </div>
+
+            <p class="form-footnote">
+              Les champs marqués <span class="form-req">*</span> sont obligatoires. En envoyant ce formulaire, vous acceptez d’être recontacté concernant votre demande.
+            </p>
+            <p class="form-footnote form-footnote--muted">
+              Après l’envoi, pensez à vérifier votre boîte de réception (et les courriers indésirables). Un message de confirmation peut être demandé <strong>une seule fois</strong> la première fois que vous nous écrivez depuis ce site.
+            </p>
+
+            <button type="submit" class="btn btn--primary form-submit">Envoyer la demande</button>
+          </form>
+        </div>
+
+        <aside class="contact-card contact-card--aside prism-glass-panel prism-glass-panel--coral" aria-labelledby="coords-title">
+          <h3 class="contact-card__title" id="coords-title">Coordonnées</h3>
+          <ul class="contact-list">
+            <li data-hide-if-empty>
+              <span class="contact-list__label">E-mail</span>
+              <a class="contact-list__value" data-bind="emailLink" href="#">fanzini.aronne.pro@gmail.com</a>
+            </li>
+            <li data-hide-if-empty>
+              <span class="contact-list__label">Téléphone</span>
+              <a class="contact-list__value" data-bind="phoneLink" href="#"></a>
+            </li>
+            <li data-hide-if-empty>
+              <span class="contact-list__label">Localisation</span>
+              <span class="contact-list__value" data-bind="addressLine"></span>
+            </li>
+          </ul>
+          <div class="contact-social" data-hide-if-empty>
+            <span class="contact-list__label">Réseaux</span>
+            <div class="contact-social__links">
+              <a class="contact-social__a" data-bind="linkedinLink" href="#" data-hide-if-empty>LinkedIn</a>
+              <a class="contact-social__a" data-bind="instagramLink" href="#" data-hide-if-empty>Instagram</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <a href="index.html" class="logo logo--sm"><span data-bind="brandName">Prism</span></a>
+        <p class="site-footer__tag">Sites vitrines sur mesure — indépendants &amp; petites structures</p>
+      </div>
+      <p class="site-footer__legal" data-hide-if-empty>
+        <span data-bind="footerNote"></span>
+      </p>
+      <p class="site-footer__copy">© <span id="year"></span> <span data-bind="brandName">Prism</span>. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="site-config.js"></script>
+  <script src="main.js"></script>
+  <script src="contact-form.js"></script>
+</body>
+</html>
